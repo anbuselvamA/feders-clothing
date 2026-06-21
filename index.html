@@ -381,32 +381,31 @@
         </div>
     </footer>
 
-    <!-- Bottom Navigation (Mobile Only) -->
-    <nav class="bottom-nav glass-nav mobile-only">
-        <a href="index.html" class="nav-item active">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
-            <span>Home</span>
-        </a>
-        <a href="shop.html" class="nav-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-            <span>Shop</span>
-        </a>
-        <a href="#" class="nav-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
-            <span>Collections</span>
-        </a>
-        <a href="#" class="nav-item">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-            <span>Account</span>
-        </a>
-        <a href="#" class="nav-item">
-            <div class="cart-icon-wrapper" style="position: relative;">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line></svg>
-                <span class="badge" style="position: absolute; top: -5px; right: -5px; background: black; color: white; border-radius: 50%; font-size: 8px; width: 14px; height: 14px; display: flex; align-items: center; justify-content: center;">0</span>
+    <!-- Shadcn-inspired Fullscreen Menu -->
+    <div id="fullscreen-menu" class="fullscreen-menu">
+        <div class="fullscreen-menu-backdrop"></div>
+        <div class="fullscreen-menu-content">
+            <button id="close-menu-btn" class="close-menu-btn" aria-label="Close Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            <nav class="fullscreen-nav">
+                <a href="index.html" class="fullscreen-nav-link">HOME</a>
+                <a href="shop.html" class="fullscreen-nav-link">SHOP</a>
+                <a href="#" class="fullscreen-nav-link">COLLECTIONS</a>
+                <a href="contact.html" class="fullscreen-nav-link">CONTACT</a>
+                <a href="#" class="fullscreen-nav-link">ACCOUNT</a>
+            </nav>
+            <div class="fullscreen-footer">
+                <p>VORÉLIS</p>
             </div>
-            <span>Cart</span>
-        </a>
-    </nav>
+        </div>
+    </div>
+
+    <!-- Floating Cart Button -->
+    <button id="floating-cart-btn" class="floating-cart-btn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line></svg>
+        <span class="floating-cart-badge">0</span>
+    </button>
 
     <!-- Review Modal -->
     <div class="review-modal-overlay" id="review-modal">

@@ -2805,3 +2805,108 @@ body.shop-page-new {
 .aceternity-img-wrapper:hover img {
     transform: scale(1.05);
 }
+
+/* --- Shadcn UI Inspired Fullscreen Menu --- */
+.fullscreen-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10001; /* Above transition overlay */
+    display: none;
+    pointer-events: none;
+}
+.fullscreen-menu.active {
+    display: block;
+    pointer-events: auto;
+}
+.fullscreen-menu-backdrop {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+.fullscreen-menu.active .fullscreen-menu-backdrop {
+    opacity: 1;
+}
+.fullscreen-menu-content {
+    position: absolute;
+    top: 0; right: 0; width: 85%; max-width: 400px; height: 100%;
+    background: var(--white);
+    transform: translateX(100%);
+    transition: transform 0.5s cubic-bezier(0.32, 0.72, 0, 1);
+    display: flex;
+    flex-direction: column;
+    padding: 60px 40px;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+}
+.fullscreen-menu.active .fullscreen-menu-content {
+    transform: translateX(0);
+}
+.close-menu-btn {
+    position: absolute;
+    top: 30px; right: 30px;
+    background: none; border: none; cursor: pointer;
+    color: var(--black);
+}
+.fullscreen-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+}
+.fullscreen-nav-link {
+    font-family: var(--font-serif);
+    font-size: 2.2rem;
+    font-weight: 400;
+    color: var(--black);
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.fullscreen-footer {
+    margin-top: auto;
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    color: var(--text-muted);
+}
+
+/* --- Floating Cart Button --- */
+.floating-cart-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 9999;
+    color: var(--black);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.floating-cart-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+.floating-cart-badge {
+    position: absolute;
+    top: -5px; right: -5px;
+    background: var(--black);
+    color: var(--white);
+    font-size: 0.75rem;
+    font-weight: 600;
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+}

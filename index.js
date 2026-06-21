@@ -343,3 +343,64 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// --- Shadcn Inspired Mobile Nav Logic ---
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburgerBtn = document.querySelector('.hamburger-btn');
+    const fullscreenMenu = document.getElementById('fullscreen-menu');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
+    const menuLinks = document.querySelectorAll('.fullscreen-nav-link');
+    const floatingCartBtn = document.getElementById('floating-cart-btn');
+    const cartOverlay = document.querySelector('.cart-overlay');
+    const cartDrawer = document.querySelector('.cart-drawer');
+    
+    if (hamburgerBtn && fullscreenMenu && closeMenuBtn) {
+        let menuTl = gsap.timeline({ paused: true });
+        
+        menuTl.to(menuLinks, {
+            y: 0,
+            opacity: 1,
+            duration: 0.6,
+            stagger: 0.1,
+            ease: "power3.out",
+            delay: 0.2
+        });
+
+        const openMenu = () => {
+            fullscreenMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            menuTl.restart();
+        };
+
+        const closeMenu = () => {
+            fullscreenMenu.classList.remove('active');
+            document.body.style.overflow = '';
+            gsap.set(menuLinks, {y: 20, opacity: 0});
+        };
+
+        hamburgerBtn.addEventListener('click', openMenu);
+        closeMenuBtn.addEventListener('click', closeMenu);
+        
+        // Close on backdrop click
+        fullscreenMenu.addEventListener('click', (e) => {
+            if (e.target.classList.contains('fullscreen-menu-backdrop')) {
+                closeMenu();
+            }
+        });
+        
+        // Close on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && fullscreenMenu.classList.contains('active')) {
+                closeMenu();
+            }
+        });
+    }
+
+    if (floatingCartBtn && cartOverlay && cartDrawer) {
+        floatingCartBtn.addEventListener('click', () => {
+            cartOverlay.classList.add('active');
+            cartDrawer.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    }
+});
