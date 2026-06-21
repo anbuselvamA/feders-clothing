@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VORÉLIS | Linen Shirt</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="shop-page-new">
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+        <p>FREE SHIPPING ON ORDERS ABOVE ₹1499</p>
+    </div>
+
+    <!-- Shop Navbar (Solid White) -->
+    <header class="navbar shop-navbar-white">
+        <nav class="nav-left">
+            <a href="index.html">HOME</a>
+            <a href="shop.html">SHOP</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+        <div class="nav-center">
+            <a href="index.html" class="logo">VORÉLIS</a>
+        </div>
+        <nav class="nav-right">
+            <button class="icon-btn" aria-label="Search">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </button>
+            <button class="icon-btn" aria-label="Account">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </button>
+            <button class="icon-btn cart-btn" aria-label="Cart">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                <span class="cart-badge">0</span>
+            </button>
+        </nav>
+    </header>
+
+    <main class="product-page-main">
+        <div class="product-gallery">
+            <img src="assets/product_shirt_1781804056324.png" alt="Linen Shirt" class="main-product-img">
+        </div>
+        <div class="product-details">
+            <h1 class="product-title-large">LINEN SHIRT</h1>
+            <p class="product-price-large">₹2,299</p>
+            
+            <div class="product-options">
+                <p class="option-label">Color: <strong>Natural</strong></p>
+                <div class="color-options">
+                    <button class="color-btn active" style="background-color: #d1c7b7;"></button>
+                    <button class="color-btn" style="background-color: #2c3e50;"></button>
+                    <button class="color-btn" style="background-color: #ffffff; border: 1px solid #ccc;"></button>
+                </div>
+
+                <p class="option-label">Size: <strong>M</strong></p>
+                <div class="size-options">
+                    <button class="size-btn">S</button>
+                    <button class="size-btn active">M</button>
+                    <button class="size-btn">L</button>
+                    <button class="size-btn">XL</button>
+                </div>
+            </div>
+
+            <button class="btn btn-primary add-to-cart-large" onclick="addToCartFromProductPage()">ADD TO CART - ₹2,299</button>
+            <p class="shipping-notice">Free shipping on orders over ₹1499</p>
+
+            <div class="product-accordion">
+                <details class="accordion-item" open>
+                    <summary>Product Details</summary>
+                    <div class="accordion-content">
+                        <p>Crafted from 100% premium European linen, this shirt offers unparalleled breathability and a relaxed drape. Perfect for warm weather or layering.</p>
+                        <ul>
+                            <li>Relaxed fit</li>
+                            <li>Button-down collar</li>
+                            <li>Chest pocket</li>
+                        </ul>
+                    </div>
+                </details>
+                <details class="accordion-item">
+                    <summary>Materials & Care</summary>
+                    <div class="accordion-content">
+                        <p>100% Linen. Machine wash cold with like colors. Do not bleach. Tumble dry low or line dry. Warm iron if needed.</p>
+                    </div>
+                </details>
+                <details class="accordion-item">
+                    <summary>Shipping & Returns</summary>
+                    <div class="accordion-content">
+                        <p>Free standard shipping on orders over ₹1499. Easy 14-day returns on all unworn items with tags attached.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-col brand-col">
+                <div class="footer-logo">VORÉLIS</div>
+                <p>Timeless styles. Premium quality.<br>Made for the way you live.</p>
+                <div class="social-links">
+                    <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                    <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>SHOP</h4>
+                <a href="#">New Arrivals</a>
+                <a href="#">Best Sellers</a>
+                <a href="#">Collections</a>
+                <a href="#">Sale</a>
+            </div>
+            <div class="footer-col">
+                <h4>HELP</h4>
+                <a href="#">Track Order</a>
+                <a href="#">Returns & Exchanges</a>
+                <a href="#">Shipping Info</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="footer-col">
+                <h4>ABOUT</h4>
+                <a href="#">Our Story</a>
+                <a href="#">Sustainability</a>
+                <a href="#">Journal</a>
+                <a href="#">Careers</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 VORÉLIS. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bottom Navigation (Mobile Only) -->
+    <nav class="bottom-nav mobile-only">
+        <a href="index.html" class="nav-item">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>Home</span>
+        </a>
+        <a href="shop.html" class="nav-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            <span>Shop</span>
+        </a>
+        <a href="#" class="nav-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            <span>Collections</span>
+        </a>
+        <a href="#" class="nav-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span>Account</span>
+        </a>
+        <a href="#" class="nav-item">
+            <div class="cart-icon-wrapper" style="position: relative;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line></svg>
+                <span class="badge" style="position: absolute; top: -5px; right: -5px; background: black; color: white; border-radius: 50%; font-size: 8px; width: 14px; height: 14px; display: flex; align-items: center; justify-content: center;">0</span>
+            </div>
+            <span>Cart</span>
+        </a>
+    </nav>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="index.js"></script>
+    <script src="cart.js"></script>
+    <script>
+        function addToCartFromProductPage() {
+            let cart = JSON.parse(localStorage.getItem('vorelis_cart')) || [];
+            const title = "LINEN SHIRT";
+            const price = 2299;
+            const image = "assets/product_shirt_1781804056324.png";
+            
+            const existingItem = cart.find(item => item.title === title);
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ title, price, image, quantity: 1, size: 'M', color: 'Natural' });
+            }
+            localStorage.setItem('vorelis_cart', JSON.stringify(cart));
+            // Reload page to trigger cart refresh or just trigger the button click
+            document.querySelector('.cart-btn').click();
+            setTimeout(() => location.reload(), 100);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VORÉLIS | Checkout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body style="background: var(--white);">
+    <header class="checkout-header" style="text-align: center; padding: 30px; border-bottom: 1px solid #eaeaea;">
+        <a href="index.html" class="logo" style="font-family: var(--font-serif); font-size: 1.6rem; letter-spacing: 10px; text-transform: uppercase;">VORÉLIS</a>
+    </header>
+    <main class="checkout-main">
+        <div class="checkout-form-section">
+            <h2>Checkout</h2>
+            <form id="checkout-form">
+                <h3>Contact Information</h3>
+                <input type="email" placeholder="Email" required class="checkout-input">
+                
+                <h3>Shipping Address</h3>
+                <div class="checkout-row">
+                    <input type="text" placeholder="First Name" required class="checkout-input">
+                    <input type="text" placeholder="Last Name" required class="checkout-input">
+                </div>
+                <input type="text" placeholder="Address" required class="checkout-input">
+                <div class="checkout-row">
+                    <input type="text" placeholder="City" required class="checkout-input">
+                    <input type="text" placeholder="State" required class="checkout-input">
+                    <input type="text" placeholder="PIN Code" required class="checkout-input">
+                </div>
+
+                <h3>Payment</h3>
+                <div class="payment-box">
+                    <label><input type="radio" name="payment" checked> Credit Card</label>
+                    <div class="card-details">
+                        <input type="text" placeholder="Card Number" class="checkout-input">
+                        <div class="checkout-row">
+                            <input type="text" placeholder="MM/YY" class="checkout-input">
+                            <input type="text" placeholder="CVV" class="checkout-input">
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="checkout-btn" style="margin-top: 30px;">Complete Order</button>
+            </form>
+        </div>
+        <div class="checkout-summary-section">
+            <div id="checkout-items"></div>
+            <div class="checkout-totals">
+                <div class="totals-row"><span>Subtotal</span> <span id="checkout-subtotal">₹0</span></div>
+                <div class="totals-row"><span>Shipping</span> <span>Free</span></div>
+                <div class="totals-row totals-final"><span>Total</span> <span id="checkout-total">₹0</span></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bottom Navigation (Mobile Only) -->
+    <nav class="bottom-nav mobile-only">
+        <a href="index.html" class="nav-item">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>Home</span>
+        </a>
+        <a href="shop.html" class="nav-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            <span>Shop</span>
+        </a>
+        <a href="#" class="nav-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            <span>Collections</span>
+        </a>
+        <a href="#" class="nav-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span>Account</span>
+        </a>
+        <a href="#" class="nav-item">
+            <div class="cart-icon-wrapper" style="position: relative;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line></svg>
+                <span class="badge" style="position: absolute; top: -5px; right: -5px; background: black; color: white; border-radius: 50%; font-size: 8px; width: 14px; height: 14px; display: flex; align-items: center; justify-content: center;">0</span>
+            </div>
+            <span>Cart</span>
+        </a>
+    </nav>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const cart = JSON.parse(localStorage.getItem('vorelis_cart')) || [];
+            const itemsContainer = document.getElementById('checkout-items');
+            let subtotal = 0;
+
+            if (cart.length === 0) {
+                itemsContainer.innerHTML = '<p>Your cart is empty.</p>';
+            } else {
+                cart.forEach(item => {
+                    subtotal += item.price * item.quantity;
+                    const itemHTML = `
+                        <div class="checkout-item">
+                            <img src="${item.image}" alt="${item.title}">
+                            <div class="checkout-item-details">
+                                <div class="checkout-item-title">${item.title}</div>
+                                <div class="checkout-item-variant">Size: ${item.size} | Qty: ${item.quantity}</div>
+                            </div>
+                            <div class="checkout-item-price">₹${(item.price * item.quantity).toLocaleString('en-IN')}</div>
+                        </div>
+                    `;
+                    itemsContainer.insertAdjacentHTML('beforeend', itemHTML);
+                });
+            }
+
+            document.getElementById('checkout-subtotal').textContent = `₹${subtotal.toLocaleString('en-IN')}`;
+            document.getElementById('checkout-total').textContent = `₹${subtotal.toLocaleString('en-IN')}`;
+
+            document.getElementById('checkout-form').addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Order placed successfully!');
+                localStorage.removeItem('vorelis_cart');
+                window.location.href = 'index.html';
+            });
+
+            // Mobile Bottom Nav Scroll Reveal
+            const bottomNav = document.querySelector('.bottom-nav.mobile-only');
+            if (bottomNav) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 50) {
+                        bottomNav.classList.add('nav-visible');
+                    } else {
+                        bottomNav.classList.remove('nav-visible');
+                    }
+                });
+                
+                if (window.scrollY > 50) {
+                    bottomNav.classList.add('nav-visible');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

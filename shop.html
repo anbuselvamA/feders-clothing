@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VORÉLIS | Shop All</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="shop-page-new">
+    <!-- Premium Preloader -->
+    <div class="premium-loader">
+        <div class="loader-content">
+            <div class="loader-monogram">
+                <span class="letter-c">C</span>
+                <span class="letter-f">F</span>
+            </div>
+            <h1 class="loader-brand">FEDERS</h1>
+            <p class="loader-sub">— CLOTHING —</p>
+            <div class="loader-progress-text"><span id="loader-percent-shop">0</span>%</div>
+        </div>
+    </div>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+        <p>FREE SHIPPING ON ORDERS ABOVE ₹1499</p>
+    </div>
+
+    <!-- Shop Navbar (Solid White) -->
+    <header class="navbar shop-navbar-white">
+        <nav class="nav-left">
+            <button class="icon-btn hamburger-btn" aria-label="Menu">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+            <a href="index.html" class="nav-link">HOME</a>
+            <a href="shop.html" class="nav-link active">SHOP</a>
+            <a href="contact.html" class="nav-link">CONTACT</a>
+        </nav>
+        <div class="nav-center">
+            <a href="index.html" class="logo">VORÉLIS</a>
+        </div>
+        <nav class="nav-right">
+            <button class="icon-btn" aria-label="Search">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </button>
+            <button class="icon-btn account-btn" aria-label="Account">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </button>
+            <button class="icon-btn cart-btn" aria-label="Cart">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                <span class="cart-badge">0</span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Shop Banner with Image -->
+    <section class="shop-banner">
+        <p class="banner-label">COLLECTIONS</p>
+        <h1 class="banner-title">Designed for Every You</h1>
+        <p class="banner-subtitle">Timeless pieces. Premium fabrics.<br>Made for the way you live.</p>
+    </section>
+
+    <!-- Horizontal Filters -->
+    <section class="shop-horizontal-filters">
+        <div class="pill-scroll-container">
+            <button class="filter-pill active">ALL</button>
+            <button class="filter-pill">SHIRTS</button>
+            <button class="filter-pill">T-SHIRTS</button>
+            <button class="filter-pill">POLOS</button>
+            <button class="filter-pill">TROUSERS</button>
+            <button class="filter-pill">JACKETS</button>
+        </div>
+        <div class="sort-dropdown-container">
+            <div class="sort-dropdown">
+                SORT BY <strong>Featured</strong>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Product Section -->
+    <section class="shop-main-fullwidth">
+
+        <!-- 4-Column Grid -->
+        <div class="products-grid-4">
+            
+            <!-- Product 1 -->
+            <div class="product-card-rounded">
+                <div class="product-img-wrapper">
+                    <span class="discount-badge">23% OFF</span>
+                    <button class="wishlist-btn-circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                    <img src="assets/product_shirt_1781804056324.png" alt="Linen Shirt" class="product-img">
+                </div>
+                <div class="product-info-minimal">
+                    <h4 class="product-title">LINEN SHIRT</h4>
+                    <div class="product-price-row">
+                        <span class="price-sale">₹2,299</span>
+                    </div>
+                    <button class="quick-add-btn">QUICK ADD <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card-rounded">
+                <div class="product-img-wrapper">
+                    <span class="discount-badge">15% OFF</span>
+                    <button class="wishlist-btn-circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                    <img src="assets/product_polo_1781804093440.png" alt="Knit Polo Shirt" class="product-img">
+                </div>
+                <div class="product-info-minimal">
+                    <h4 class="product-title">KNIT POLO SHIRT</h4>
+                    <div class="product-price-row">
+                        <span class="price-sale">₹1,899</span>
+                    </div>
+                    <button class="quick-add-btn">QUICK ADD <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card-rounded">
+                <div class="product-img-wrapper">
+                    <span class="discount-badge">20% OFF</span>
+                    <button class="wishlist-btn-circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                    <img src="assets/product_trousers_1781804077264.png" alt="Relaxed Fit Trousers" class="product-img">
+                </div>
+                <div class="product-info-minimal">
+                    <h4 class="product-title">RELAXED FIT TROUSERS</h4>
+                    <div class="product-price-row">
+                        <span class="price-sale">₹2,499</span>
+                    </div>
+                    <button class="quick-add-btn">QUICK ADD <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card-rounded">
+                <div class="product-img-wrapper">
+                    <span class="discount-badge">10% OFF</span>
+                    <button class="wishlist-btn-circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                    <img src="assets/product_shirt_1781804056324.png" alt="Linen Blend Shirt" class="product-img">
+                </div>
+                <div class="product-info-minimal">
+                    <h4 class="product-title">LINEN BLEND SHIRT</h4>
+                    <div class="product-price-row">
+                        <span class="price-sale">₹2,199</span>
+                    </div>
+                    <button class="quick-add-btn">QUICK ADD <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card-rounded">
+                <div class="product-img-wrapper">
+                    <button class="wishlist-btn-circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                    <img src="assets/product_tshirt_1781804067099.png" alt="Textured Polo Shirt" class="product-img">
+                </div>
+                <div class="product-info-minimal">
+                    <h4 class="product-title">TEXTURED POLO SHIRT</h4>
+                    <div class="product-price-row">
+                        <span class="price-sale">₹1,799</span>
+                    </div>
+                    <button class="quick-add-btn">QUICK ADD <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+                </div>
+            </div>
+            
+            <!-- Product 6 -->
+            <div class="product-card-rounded">
+                <div class="product-img-wrapper">
+                    <button class="wishlist-btn-circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                    <img src="assets/product_shirt_1781804056324.png" alt="Casual Shirt" class="product-img">
+                </div>
+                <div class="product-info-minimal">
+                    <h4 class="product-title">CASUAL SHIRT</h4>
+                    <div class="product-price-row">
+                        <span class="price-sale">₹1,999</span>
+                    </div>
+                    <button class="quick-add-btn">QUICK ADD <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product-card-rounded">
+                <div class="product-img-wrapper">
+                    <button class="wishlist-btn-circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                    <img src="assets/product_tshirt_1781804067099.png" alt="Cotton T-Shirt" class="product-img">
+                </div>
+                <div class="product-info-minimal">
+                    <h4 class="product-title">COTTON T-SHIRT</h4>
+                    <div class="product-price-row">
+                        <span class="price-sale">₹1,499</span>
+                    </div>
+                    <button class="quick-add-btn">QUICK ADD <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="product-card-rounded">
+                <div class="product-img-wrapper">
+                    <button class="wishlist-btn-circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                    <img src="assets/product_trousers_1781804077264.png" alt="Pleated Trousers" class="product-img">
+                </div>
+                <div class="product-info-minimal">
+                    <h4 class="product-title">PLEATED TROUSERS</h4>
+                    <div class="product-price-row">
+                        <span class="price-sale">₹2,599</span>
+                    </div>
+                    <button class="quick-add-btn">QUICK ADD <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+                </div>
+            </div>
+
+
+             <!-- Product 9 -->
+             <div class="product-card-rounded">
+                <div class="product-img-wrapper">
+                    <button class="wishlist-btn-circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                    <img src="assets/product_shirt_1781804056324.png" alt="Linen Overshirt" class="product-img">
+                </div>
+                <div class="product-info-minimal">
+                    <h4 class="product-title">LINEN OVERSHIRT</h4>
+                    <div class="product-price-row">
+                        <span class="price-sale">₹2,499</span>
+                    </div>
+                    <button class="quick-add-btn">QUICK ADD <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+                </div>
+            </div>
+            
+             <!-- Product 10 -->
+             <div class="product-card-rounded">
+                <div class="product-img-wrapper">
+                    <button class="wishlist-btn-circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                    <img src="assets/product_polo_1781804093440.png" alt="Essential Polo" class="product-img">
+                </div>
+                <div class="product-info-minimal">
+                    <h4 class="product-title">ESSENTIAL POLO</h4>
+                    <div class="product-price-row">
+                        <span class="price-sale">₹1,299</span>
+                    </div>
+                    <button class="quick-add-btn">QUICK ADD <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+                </div>
+            </div>
+            
+             <!-- Product 11 -->
+             <div class="product-card-rounded">
+                <div class="product-img-wrapper">
+                    <button class="wishlist-btn-circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                    <img src="assets/product_trousers_1781804077264.png" alt="Slim Chinos" class="product-img">
+                </div>
+                <div class="product-info-minimal">
+                    <h4 class="product-title">SLIM CHINOS</h4>
+                    <div class="product-price-row">
+                        <span class="price-sale">₹2,199</span>
+                    </div>
+                    <button class="quick-add-btn">QUICK ADD <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+                </div>
+            </div>
+
+             <!-- Product 12 -->
+             <div class="product-card-rounded">
+                <div class="product-img-wrapper">
+                    <button class="wishlist-btn-circle"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></button>
+                    <img src="assets/product_tshirt_1781804067099.png" alt="Classic T-Shirt" class="product-img">
+                </div>
+                <div class="product-info-minimal">
+                    <h4 class="product-title">CLASSIC T-SHIRT</h4>
+                    <div class="product-price-row">
+                        <span class="price-sale">₹1,099</span>
+                    </div>
+                    <button class="quick-add-btn">QUICK ADD <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-col brand-col">
+                <div class="footer-logo">VORÉLIS</div>
+                <p>Timeless styles. Premium quality.<br>Made for the way you live.</p>
+                <div class="social-links">
+                    <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                    <a href="#"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>SHOP</h4>
+                <a href="#">New Arrivals</a>
+                <a href="#">Best Sellers</a>
+                <a href="#">Collections</a>
+                <a href="#">Sale</a>
+            </div>
+            <div class="footer-col">
+                <h4>HELP</h4>
+                <a href="#">Track Order</a>
+                <a href="#">Returns & Exchanges</a>
+                <a href="#">Shipping Info</a>
+                <a href="contact.html">Contact Us</a>
+            </div>
+            <div class="footer-col">
+                <h4>ABOUT</h4>
+                <a href="#">Our Story</a>
+                <a href="#">Sustainability</a>
+                <a href="#">Journal</a>
+                <a href="#">Careers</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 VORÉLIS. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bottom Navigation (Mobile Only) -->
+    <nav class="bottom-nav mobile-only">
+        <a href="index.html" class="nav-item">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>Home</span>
+        </a>
+        <a href="shop.html" class="nav-item active">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+            <span>Shop</span>
+        </a>
+        <a href="#" class="nav-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            <span>Collections</span>
+        </a>
+        <a href="#" class="nav-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <span>Account</span>
+        </a>
+        <a href="#" class="nav-item">
+            <div class="cart-icon-wrapper" style="position: relative;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line></svg>
+                <span class="badge" style="position: absolute; top: -5px; right: -5px; background: black; color: white; border-radius: 50%; font-size: 8px; width: 14px; height: 14px; display: flex; align-items: center; justify-content: center;">0</span>
+            </div>
+            <span>Cart</span>
+        </a>
+    </nav>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="index.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>
